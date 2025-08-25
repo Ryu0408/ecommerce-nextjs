@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "클라우드 네이티브 이커머스",
-  description: "클라우드 네이티브 이커머스 MAS 예제 프로젝트",
+  title: "이커머스 MSA",
+  description: "이커머스 MSA 프로젝트",
 };
 
 export default function RootLayout({

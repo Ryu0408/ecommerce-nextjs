@@ -16,6 +16,9 @@ export default async function ProductsPage() {
                         <div className="text-sm text-muted-foreground">
                             {p.price.toLocaleString()}원
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                            카테고리: {p.categoryName ?? "없음"}
+                        </div>
                     </div>
                 ))}
             </div>

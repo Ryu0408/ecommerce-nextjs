@@ -30,7 +30,13 @@ export default function ProductsPage() {
     }
   };
 
-  if (!data) return <div>Loading...</div>;
+  if (!data) 
+  return (
+    <>
+      <Header />
+      <div>Loading...</div>
+    </>
+  );
 
   return (
     <>

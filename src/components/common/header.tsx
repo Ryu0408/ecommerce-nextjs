@@ -4,7 +4,7 @@ export function Header() {
   return (
     <div className="flex items-center justify-between py-4">
       <Link href="/" className="text-xl font-semibold">
-        이커머스 MSA
+        이커머스 Microservice Architecture
       </Link>
       <nav className="space-x-4 text-sm">
         <Link href="/products" className="hover:underline">상품</Link>

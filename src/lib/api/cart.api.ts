@@ -11,7 +11,10 @@ export async function addToCart(productId: string, quantity = 1) {
 }
 
 export async function getCart() {
-  const res = await fetch(`${BASE}/api/cart`, { headers: cartHeaders(), cache: "no-store" });
+  const res = await fetch(`${BASE}/api/cart`, { 
+    headers: cartHeaders(),
+    cache: "no-store" 
+  });
   if (!res.ok) throw new Error(`getCart ${res.status}`);
   return res.json() as Promise<{ items: { productId: string; quantity: number }[]; totalQuantity: number }>;
 }
@@ -31,4 +34,12 @@ export async function removeItem(productId: string) {
     headers: cartHeaders(),
   });
   if (!res.ok) throw new Error(`removeItem ${res.status}`);
+}
+
+export async function clearCart() {
+  const res = await fetch(`${BASE}/api/cart`, {
+    method: "DELETE",
+    headers: cartHeaders(),
+  });
+  if (!res.ok) throw new Error(`clearCart ${res.status}`);
 }
